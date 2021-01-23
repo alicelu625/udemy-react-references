@@ -1,6 +1,6 @@
 ## HTTP Requests - Axios
 
-Fetches (GET) a list of posts from the server [(JSONPlaceholder)](jsonplaceholder.typicode.com). Renders fetched data to the screen. Transforms data to get only posts 1-4. When post selected, fetch post data. Adding a post will POST data to the server. Pressing delete will send DELETE request.
+Fetches (GET) a list of posts from the server ([JSONPlaceholder](jsonplaceholder.typicode.com)). Renders fetched data to the screen. Transforms data to get only posts 1-4. When post selected, fetch post data. Adding a post will POST data to the server. Pressing delete will send DELETE request.
 
 Application was developed along with the [React course on Udemy](https://www.udemy.com/course/react-the-complete-guide-incl-redux/).
 
