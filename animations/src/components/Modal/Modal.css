@@ -1,0 +1,76 @@
+.Modal {
+    position: fixed;
+    z-index: 200;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    transition: all 0.3s ease-out;
+}
+
+/*using CSSTransition Component*/
+.fade-slide-enter { /*removed after 1 frame, for initialization*/
+
+}
+
+.fade-slide-enter-active { /*for the actual animation*/
+    animation: openModal 0.4s ease-out forwards;
+}
+
+.fade-slide-exit { /*removed after 1 frame*/
+
+}
+
+.fade-slide-exit-active { /*for the actual animation*/
+    animation: closeModal 1s ease-out forwards;
+}
+
+/*Using CSS animation/ React Transition Group*/
+.ModalOpen {
+    animation: openModal 0.4s ease-out forwards; /*define set of keyframes*/
+    /*using transition
+    opacity: 1;
+    transform: translateY(0); /*to the position it's supposed to be in*/
+}
+
+.ModalClosed {
+    animation: closeModal 1s ease-out forwards;
+    /*using transition
+    opacity: 0;
+    transform: translateY(-200%); /*move it up by 100%*/
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateY(-300%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-300%);
+    }
+}
