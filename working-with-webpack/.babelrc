@@ -1,0 +1,19 @@
+{
+    //specify presets you want to apply to code
+    "presets": [
+        [
+            "@babel/preset-env", {
+                //targets key - tell Babel which browsers it should compile targets
+                "targets": {
+                    "browsers": [">1%", "last 2 versions"]
+                }
+            }
+        ],
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        //controls which syntax Babel errors out or which syntax it supports
+        //support some JS syntax in its proposal stage at the moment & not officially supported yet
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
